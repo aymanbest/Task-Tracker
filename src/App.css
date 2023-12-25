@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+span {
+    font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.taskList {
+    display: flex;
+    flex-direction: row;
 }
 
-.App-link {
-  color: #61dafb;
+.taskItem {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.taskItem .taskName {
+    margin-bottom: 10px;
+}
+
+.taskItem button {
+    align-self: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    gap: 20px;
+}
+
+.taskItem .task-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.newTaskForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.newTaskForm label {
+    font-weight: bold;
+}
+
+.newTaskForm input,
+.newTaskForm select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+}
+
+.newTaskForm button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #060b11;
+    color: white;
+    cursor: pointer;
+}
+
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4b4b4b;
+}
+
+.priority-high {
+    color: red;
+}
+
+.priority-medium {
+    color: orange;
+}
+
+.priority-low {
+    color: green;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    text-align: center;
+    color: black;
+    font-size:large;
+
+}
+
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    width: 332px;
+    height: 217px;
+
+}
+
+table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+
+.filter-select {
+    font-size: 1.2em;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #0c0b0b;
+    margin: auto;
+    margin-top: 20px;
+    display: flex; 
+    justify-content: center; 
+    
 }
